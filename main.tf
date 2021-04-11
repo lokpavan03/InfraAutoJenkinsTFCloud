@@ -4,7 +4,7 @@ terraform {
     organization = "loktf"
 
     workspaces {
-      name = "terraform"
+      name = "jenkins"
     }
   }
 }
