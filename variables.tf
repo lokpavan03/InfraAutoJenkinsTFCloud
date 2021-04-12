@@ -21,25 +21,25 @@ variable "tenant_id" {
 variable "resource_group_name" {
   type        = string
   description = "The default name is TFCloudRG007, Provide the Resource Group Name in terraform.tfvars file if any change needed."
-  default     = "TFCloudRG"
+  default     = ""
 }
 
 variable "resource_group_location" {
   type        = string
   description = "The default location is West Europe, Provide the Resource Group location in terraform.tfvars file if any change needed."
-  default     = "West Europe"
+  default     = ""
 }
 
 variable "vnet_name" {
   type        = string
   description = "The default Vnet_Name is vnet-tf, Provide the Virtual Network name in terraform.tfvars file if any change needed."
-  default     = "vnet-tf"
+  default     = ""
 }
 
 variable "subnet_name" {
   type        = string
   description = "The default Subnet is subnet01, Provide the subnet name in terraform.tfvars file if any change needed."
-  default     = "subnet01"
+  default     = ""
 }
 
 variable "public_ip" {
@@ -57,18 +57,18 @@ variable "network_security_group_name" {
 variable "azure_virtual_machine_name" {
   type        = string
   description = "The default VM name is TFCloudVM, Provide the VM name in terraform.tfvars file if any change needed."
-  default     = "TFCloudVM"
+  default     = ""
 }
 
 variable "admin_vm_username" {
   type        = string
   description = "The default VM admin user is adminuser, Provide the admin user name in terraform.tfvars file if any change needed."
-  default     = "adminuser"
+  default     = ""
 }
 
 variable "admin_vm_password" {
   type        = string
   description = "The default VM admin password is *********, Provide the admin user password in terraform.tfvars file if any change needed."
   sensitive   = true
-  default = "Admin123$%"
+  default = ""
 }
