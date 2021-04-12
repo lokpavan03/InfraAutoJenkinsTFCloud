@@ -16,8 +16,7 @@ pipeline {
         }
         stage('TFvarsFile') {
             steps {
-                echo "Hi"
-                    //writeFile file: 'terraform.tfvars', text:  """resource_group_name = "${params.RescourceGroupName}" \nresource_group_location = "${params.ResourceGroupLoaction}"\nvnet_name = "${params.VirtualNetworkName}"\nsubnet_name = "${params.SubNetName}"\nazure_virtual_machine_name = "${params.VirtualMachineName}"\nadmin_vm_username = "${params.VMUserName}"\nadmin_vm_password = "${params.VMPassword}"\n"""
+                writeFile file: 'terraform.auto.tfvars', text:  """resource_group_name = "${params.RescourceGroupName}" \nresource_group_location = "${params.ResourceGroupLoaction}"\nvnet_name = "${params.VirtualNetworkName}"\nsubnet_name = "${params.SubNetName}"\nazure_virtual_machine_name = "${params.VirtualMachineName}"\nadmin_vm_username = "${params.VMUserName}"\nadmin_vm_password = "${params.VMPassword}"\n"""
             }
         }        
         stage('Terraform init') {
