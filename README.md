@@ -2,11 +2,15 @@
 
 ##Jenkins setup from Docker
 <span style="color:black;">Contents</span>
+- [Flow Diagram](#Flow-Diagram)
 - [Jenkins setup from Docker](#Jenkins-setup-from-Docker)
 - [Terraform Cloud setup](#Terraform-Cloud-setup)
 - [Terraform Scripts](#Terraform-Scripts)
 - [Jenkins Pipeline](#Jenkins-Pipeline)
-- [Azure Validation](#Azure-Validation)
+- [Azure Resources Validation](#Azure-Resources-Validation)
+
+## _**Flow Diagram**_
+![Jenkins Docker](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/FlowChart.JPG)
 
 ## _**Jenkins setup from Docker**_
 1. Install the Docker Engine from the following URL **[DockerEngine](https://docs.docker.com/engine/install/)** as per the environment.
@@ -47,13 +51,42 @@
 2. Once the Terraform Cloud account created login to the Terraform Cloud portal with Username and Password.
 3. Create an organization if you are new to Terraform cloud or use the existing organization.
 4. Create a workspace while creating it choose API_driven workflow environment type and provide the workspace name.
-5. Setup API_TOKEN for GitHub to Terraform Cloud connection setup
-6. Go to workspace -> Settings -> Under the organizational settings blade choose API Tokens -> Under the API Tokens create Team Tokens -> Copy the Token.
-7. Save the token as TF_API_TOKEN in GitHub Secrets.
-8. Create terraform.tfvars variables under the Workspace
+
+![Terraform_Cloud](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Terraform.gif)
+
+6. Setup API_TOKEN for GitHub to Terraform Cloud connection setup
+7. Go to workspace -> User Settings -> Under the User options right top corner -> Tokens -> Create an API Token and name it -> Copy the Token.
+8. Save the token as TF_API_TOKEN in GitHub Secrets and provide the secret under the terraform configuration provider in **main.tf** file.
 9. Service Principal login needs the following variables and get the values from the Azure App
 
           * subscription_id
           * client_id
           * client_secret
           * tenant_id
+
+![Terraform_Token](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Terraform_token.gif)
+
+## _**Terraform Scripts**_
+1. Create the Scripts as per the Azure resources requirement.
+2. In Terraform **main.tf** is the main file it contains the Terraform Cloud Configuration block, Azure resource provider block and resoures block.
+3. In Terraform **variables.tf** contains all the variable declaration information.
+
+![Terraform_Scripts](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/TerraformScripts.gif)
+
+## _**Jenkins Pipeline**_
+1. Create a New Item in the Jenkins dashboard and choose the pipeline job and provide name for it.
+
+![Jenkins Pipeline](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Jenkins_pipeline.gif)
+
+3. Generate the Jenkins pipeline script using syntax generator.
+4. Once script is reade, save the file as Jenkinsfile and store it in GitHub repository.
+5. Run the Jenkinsfile from the pipeline through SCM.
+
+![Jenkinsfile](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Pipeline_job.gif)
+
+## _**Azure Resource Validation**_
+1. Login to the Azure Portal **[AzurePortal](https://portal.azure.com)** with your credentials
+2. Go to resouce group and check for created resources.
+3. Validate whether the resources exists or not.
+
+![Azure Resources Validation](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Validation.gif)
