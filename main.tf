@@ -7,17 +7,13 @@ terraform {
       name = "jenkins"
     }
     #token = "Nq7LaRR5Es5mxQ.atlasv1.HbQupZg9zVxAlwjHR9yiiNaobeswfsvYyt17n5kU84AePx8GfK8XmQcBySM3qgF109E"
-    token = secret_key
+    token = var.token
   }
 }
 
 #Configure the Microsoft Azure Provider and here logging to Azure with the Service Principal
 provider "azurerm" {
   features {}
-  subscription_id = "eab04c08-63fc-4336-909a-e1b7f7d8ca1e"
-  client_id       = "24cad02a-ae8d-4ef2-93c8-c7a8afb31cf6"
-  client_secret   = "I1iU0RphD3FOgQz~7JjCK8o1s_RW93~~NB"
-  tenant_id       = "7f3f7804-5327-4427-ba97-e16ad406dd43"
 }
 
 #Create a Resource Group in Azure using Service Principal
