@@ -37,14 +37,19 @@
 8. Once the container is up and running state. Open the browser and hit the below URL
 
              **http://localhost:8080**
-             
+
+![Jenkins Docker](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/docker.gif)
+
 9. Install the required plugins while setting up Jenkins and finish the basic setup.
 10.Go to the Jenkins Dashboard -> Manage Jenkins -> Manage Plugins, under the Available plugins tab search for the "Blue Ocean" and "Active Choices" plugins and install it with out restart.
-11.For test the Blue Ocean UI hit the below URL
+
+![Jenkins Plugins Installation](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Plugins_Installation.gif)
+
+10.For test the Blue Ocean UI hit the below URL
 
              **http://localhost:8080/blue**
 
-![Jenkins Docker](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Jenkins_docker.gif)
+![Jenkins Blue](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/BlueOcean.gif)
 
 ## _**Terraform Cloud setup**_
 1. Create a Terraform Cloud account use the following URL **[TerraformCloud](https://www.terraform.io/cloud)** if account doesn't exists.
@@ -52,7 +57,7 @@
 3. Create an organization if you are new to Terraform cloud or use the existing organization.
 4. Create a workspace while creating it choose API_driven workflow environment type and provide the workspace name.
 
-![Terraform_Cloud](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Terraform.gif)
+![Terraform_Cloud](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/TerraformWorkspace.gif)
 
 6. Setup API_TOKEN for GitHub to Terraform Cloud connection setup
 7. Go to workspace -> User Settings -> Under the User options right top corner -> Tokens -> Create an API Token and name it -> Copy the Token.
@@ -64,7 +69,7 @@
           * client_secret
           * tenant_id
 
-![Terraform_Token](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Terraform_token.gif)
+![Terraform_Token](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/TerraformToken.gif)
 
 ## _**Terraform Scripts**_
 1. Create the Scripts as per the Azure resources requirement.
@@ -76,13 +81,17 @@
 ## _**Jenkins Pipeline**_
 1. Create a New Item in the Jenkins dashboard and choose the pipeline job and provide name for it.
 
-![Jenkins Pipeline](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Jenkins_pipeline.gif)
+![Jenkins Pipeline](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/PipelineJob.gif)
 
 3. Generate the Jenkins pipeline script using syntax generator.
 4. Once script is reade, save the file as Jenkinsfile and store it in GitHub repository.
 5. Run the Jenkinsfile from the pipeline through SCM.
 
-![Jenkinsfile](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/Pipeline_job.gif)
+![Jenkinsfile](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/SCM_Jenkinsfile.gif)
+
+6. Run the Jenkins Pipeline Job with Build Parameters and provide the necessary inputs.
+
+![JenkinsPipelineRun](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/JenkinsJobParams.gif)
 
 ## _**Azure Resource Validation**_
 1. Login to the Azure Portal **[AzurePortal](https://portal.azure.com)** with your credentials
