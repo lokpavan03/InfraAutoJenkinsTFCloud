@@ -6,6 +6,7 @@ terraform {
     workspaces {
       name = "jenkins"
     }
+    token = var.TF_API_TOKEN
   }
 }
 
