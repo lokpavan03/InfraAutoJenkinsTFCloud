@@ -6,8 +6,8 @@ terraform {
     workspaces {
       name = "jenkins"
     }
-    token = "Nq7LaRR5Es5mxQ.atlasv1.HbQupZg9zVxAlwjHR9yiiNaobeswfsvYyt17n5kU84AePx8GfK8XmQcBySM3qgF109E"
-    #token = "berVgzEsrybnhQ.atlasv1.RVTGy1cVEpqIvK287ah9kd8GLSerZrNI7dM9bMLSjTuUqXkDVokISJxkaLc3y4V1vvU"
+    #token = "Nq7LaRR5Es5mxQ.atlasv1.HbQupZg9zVxAlwjHR9yiiNaobeswfsvYyt17n5kU84AePx8GfK8XmQcBySM3qgF109E"
+    token = secret_key
   }
 }
 
