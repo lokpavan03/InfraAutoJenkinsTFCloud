@@ -16,12 +16,12 @@ pipeline {
         }
         stage('TFvarsFile') {
             steps {
-                    writeFile file: 'terraform.tfvars', text:  """resource_group_name = "${params.RescourceGroupName}"\n
-                    resource_group_location = "${params.ResourceGroupLoaction}"\n
-                    vnet_name = "${params.VirtualNetworkName}"\n
-                    subnet_name = "${params.SubNetName}"\n
-                    azure_virtual_machine_name = "${params.VirtualMachineName}"\n
-                    admin_vm_username = "${params.VMUserName}"\n
+                    writeFile file: 'terraform.tfvars', text:  """resource_group_name = "${params.RescourceGroupName}"
+                    resource_group_location = "${params.ResourceGroupLoaction}"
+                    vnet_name = "${params.VirtualNetworkName}"
+                    subnet_name = "${params.SubNetName}"
+                    azure_virtual_machine_name = "${params.VirtualMachineName}"
+                    admin_vm_username = "${params.VMUserName}"
                     admin_vm_password = "${params.VMPassword}"\n"""
             }
         }        
