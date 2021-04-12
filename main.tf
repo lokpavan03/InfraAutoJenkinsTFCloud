@@ -33,7 +33,7 @@ resource "azurerm_virtual_network" "vnet" {
   location            = azurerm_resource_group.rg.location
   address_space       = ["10.0.0.0/16"]
   tags = {
-        environment = "Terraform Cloud Demo"
+        environment = "Terraform Cloud with Jenkins"
     }
 }
 
@@ -62,7 +62,7 @@ resource "azurerm_public_ip" "pip" {
     allocation_method            = "Dynamic"
 
     tags = {
-        environment = "Terraform Cloud Demo"
+        environment = "Terraform Cloud with Jenkins"
     }
 }
 
@@ -85,7 +85,7 @@ resource "azurerm_network_security_group" "nsg" {
     }
 
     tags = {
-        environment = "Terraform Cloud Demo"
+        environment = "Terraform Cloud with Jenkins"
     }
 }
 
@@ -103,7 +103,7 @@ resource "azurerm_network_interface" "nic" {
     }
 
     tags = {
-        environment = "Terraform Cloud Demo"
+        environment = "Terraform Cloud with Jenkins"
     }
 }
 
@@ -163,6 +163,6 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     disable_password_authentication = false
 
     tags = {
-        environment = "Terraform Cloud Demo"
+        environment = "Terraform Cloud with Jenkins"
     }
 }
