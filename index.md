@@ -48,7 +48,7 @@
 
              **http://localhost:8080/blue**
 
-![Jenkins Blue](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/BlueOcean.gif)
+![Jenkins Blue](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/BlueOcean.gif?raw=true)
 
 ## _**Terraform Cloud setup**_
 1. Create a Terraform Cloud account use the following URL **[TerraformCloud](https://www.terraform.io/cloud)** if account doesn't exists.
@@ -56,7 +56,7 @@
 3. Create an organization if you are new to Terraform cloud or use the existing organization.
 4. Create a workspace while creating it choose API_driven workflow environment type and provide the workspace name.
 
-![Terraform_Cloud](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/TerraformWorkspace.gif)
+![Terraform_Cloud](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/TerraformWorkspace.gif?raw=true)
 
 6. Setup API_TOKEN for GitHub to Terraform Cloud connection setup
 7. Go to workspace -> User Settings -> Under the User options right top corner -> Tokens -> Create an API Token and name it -> Copy the Token.
@@ -68,33 +68,33 @@
           * client_secret
           * tenant_id
 
-![Terraform_Token](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/TerraformToken.gif)
+![Terraform_Token](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/TerraformToken.gif?raw=true)
 
 ## _**Terraform Scripts**_
 1. Create the Scripts as per the Azure resources requirement.
 2. In Terraform **main.tf** is the main file it contains the Terraform Cloud Configuration block, Azure resource provider block and resoures block.
 3. In Terraform **variables.tf** contains all the variable declaration information.
 
-![Terraform_Scripts](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/TerraformScripts.gif)
+![Terraform_Scripts](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/TerraformScripts.gif?raw=true)
 
 ## _**Jenkins Pipeline**_
 1. Create a New Item in the Jenkins dashboard and choose the pipeline job and provide name for it.
 
-![Jenkins Pipeline](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/PipelineJob.gif)
+![Jenkins Pipeline](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/PipelineJob.gif?raw=true)
 
 3. Generate the Jenkins pipeline script using syntax generator.
 4. Once script is reade, save the file as Jenkinsfile and store it in GitHub repository.
 5. Run the Jenkinsfile from the pipeline through SCM.
 
-![Jenkinsfile](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/SCM_Jenkinsfile.gif)
+![Jenkinsfile](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/SCM_Jenkinsfile.gif?raw=true)
 
 6. Run the Jenkins Pipeline Job with Build Parameters and provide the necessary inputs.
 
-![JenkinsPipelineRun](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/JenkinsJobParams.gif)
+![JenkinsPipelineRun](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/JenkinsJobParams.gif?raw=true)
 
 ## _**Azure Resource Validation**_
 1. Login to the Azure Portal **[AzurePortal](https://portal.azure.com)** with your credentials
 2. Go to resouce group and check for created resources.
 3. Validate whether the resources exists or not.
 
-![Azure Resources Validation](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/Validation.gif)
+![Azure Resources Validation](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/Validation.gif?raw=true)
