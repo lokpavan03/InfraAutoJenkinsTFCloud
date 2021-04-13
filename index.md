@@ -9,7 +9,7 @@
 - [Azure Resources Validation](#Azure-Resources-Validation)
 
 ## _**Flow Diagram**_
-![Jenkins Docker](https://github.com/lokpavan03/jenkinstf/blob/master/jpgs/FlowChart.JPG)
+![Jenkins Docker](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/FlowChart.JPG?raw=true)
 
 ## _**Jenkins setup from Docker**_
 1. Install the Docker Engine from the following URL **[DockerEngine](https://docs.docker.com/engine/install/)** as per the environment.
