@@ -95,6 +95,9 @@
 ## _**Azure Resource Validation**_
 1. Login to the Azure Portal **[AzurePortal](https://portal.azure.com)** with your credentials
 2. Go to resouce group and check for created resources.
-3. Validate whether the resources exists or not.
+3. Validate whether the resources created or not.
 
 ![Azure Resources Validation](https://github.com/lokpavan03/InfraAutoJenkinsTFCloud/blob/master/jpgs/Validation.gif)
+
+Thanks,
+Lok
