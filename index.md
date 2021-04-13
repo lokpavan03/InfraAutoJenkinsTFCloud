@@ -1,6 +1,5 @@
 # Azure Infrastructure Automation with Jenkins and Terraform Cloud
 
-##Jenkins setup from Docker
 <span style="color:black;">Contents</span>
 - [Flow Diagram](#Flow-Diagram)
 - [Jenkins setup from Docker](#Jenkins-setup-from-Docker)
